@@ -1,13 +1,7 @@
 const countPhrasesMusic = require("./index")
+const fs = require("fs")
 
-const lyrics = `Mas não vê
-Que o amor não se esconde
-Mesmo em silêncio
-Pode se ouvir ao longe
-Não se foge
-Não se pode negar o amor
-Só entregar-se
-A esse planeta de cores`
+const lyrics = fs.readFileSync("./planeta de cores.txt", "utf8")
 
 const phrases = countPhrasesMusic(lyrics)
 console.log(phrases)
