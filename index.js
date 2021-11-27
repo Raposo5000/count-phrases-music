@@ -2,7 +2,7 @@ module.exports = function (lyrics) {
   const phrases = String(lyrics)
     .toLocaleLowerCase()
     .split("\n")
-    .filter((frase) => frase.trim() !== "");
+    .filter((phrase) => phrase.trim() !== "");
 
   const repetedPhrases = [...new Set(phrases)];
   
