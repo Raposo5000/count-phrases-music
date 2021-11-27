@@ -4,7 +4,10 @@
   "description": "counts repeated phrases and phrases from the lyrics of a song.",
   "main": "index.js",
   "Entry point": "index.js",
-  "Github repository": "https://github.com/Raposo5000/count-phrases-music",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raposo5000/count-phrases-music"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
