@@ -1,6 +1,6 @@
 {
   "name": "count-phrases-music",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "counts repeated phrases and phrases from the lyrics of a song.",
   "main": "index.js",
   "Entry point": "index.js",
