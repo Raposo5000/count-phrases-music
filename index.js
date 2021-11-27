@@ -4,12 +4,25 @@ module.exports = function (lyrics) {
     .split("\n")
     .filter((phrase) => phrase.trim() !== "");
 
-  const repetedPhrases = [...new Set(phrases)];
-  
+  const uniquePhrases = [...new Set(phrases)];
+
+  const notRepetedPhrases = uniquePhrases.filter((phrase) => {
+    const count = phrases.filter((p) => p === phrase).length;
+    return count === 1;
+  });
+
+  const repetedPhrases = [
+    ...new Set(
+      phrases.filter((phrase) => {
+        const count = phrases.filter((p) => p === phrase).length;
+        return count > 1;
+      })
+    ),
+  ];
+
   return {
-    allPhrases: phrases,
-    phrasesLength: phrases.length,
-    repetedPhrases: repetedPhrases,
-    repetedPhrasesLength: repetedPhrases.length,
+    uniquePhrases,
+    notRepetedPhrases,
+    repetedPhrases,
   };
 };
